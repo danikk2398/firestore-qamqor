@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+
+body, html {padding:0;margin:0;height:100%;}
+.four-block-grid {
+  display: flex;
+  flex-flow: row wrap;
+  height: 75%;
+  text-align: center;
+  
+}
+.navbar{
+  height: 2%;
+}
+a{
+  text-decoration: none;
+}
+a:link, a:visited {
+  color: rgb(0, 0, 0);
+}
+
+.header{
+    height: 23%;
+    /* background-image: url('header.jpg'); */
+    background-color: rgba(243, 151, 255, 0.438);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    font-family: 'Ropa Sans', sans-serif;
+    font-size: 50pt;
+    font-weight: lighter;
+    text-align: center;
+    
+}
+.txt{
+    font-family: 'Ropa Sans', sans-serif;
+    font-size: 50pt;
+    font-weight: lighter;
+    
+}
+
+.four-block-grid > div {
+  width: 50%;
+}
+.four-block-grid > div:nth-of-type(1) {
+  background: #7FCBF5;
+  
+}
+.four-block-grid > div:nth-of-type(2) {
+  background: #FFC9C9;
+}
+.four-block-grid > div:nth-of-type(3) {
+  background: #8FF5DD;
+}
+.four-block-grid > div:nth-of-type(4) {
+  background: #EED5FD;
+}
+
+
+button {
+  isolation: isolate;
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  margin: 1em;
+  padding: 1em 2em;
+  box-shadow: inset 0 0 0 2px #f45e61;
+  color: #f45e61;
+  font-size: inherit;
+  font-weight: 700;
+  position: relative;
+  vertical-align: auto;
+  display: inline-block;
+}
+button::before, button::after {
+  box-sizing: inherit;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.block_button {
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+.block_button::before, .block_button::after {
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+}
+.block_button::before {
+  top: 0;
+  left: 0;
+}
+.block_button::after {
+  bottom: 0;
+  right: 0;
+}
+.block_button:hover {
+  color: black;
+}
+.block_button:hover::before, .block_button:hover::after {
+  width: 100%;
+  height: 100%;
+}
+.block_button:hover::before {
+  border-top-color: black;
+  border-right-color: black;
+  -webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+.block_button:hover::after {
+  border-bottom-color: black;
+  border-left-color: black;
+  -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+
